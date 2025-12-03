@@ -31,7 +31,7 @@ function searchBooks(query) {
         }) 
         .then(function (data) {
 
-            if(!data.docs === 0) {
+            if(data.docs.length === 0) {
                 alert("No results found");
                 return;
             }
@@ -67,3 +67,4 @@ function displayBooks(books) {
 
 
 }
+
