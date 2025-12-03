@@ -31,6 +31,11 @@ function searchBooks(query) {
         }) 
         .then(function (data) {
 
+            if(!data.docs === 0) {
+                alert("No results found");
+                return;
+            }
+            
             displayBooks(data.docs);
         })
 
@@ -59,5 +64,6 @@ function displayBooks(books) {
         resultList.appendChild(item);
 
     })
+
 
 }
