@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Giftcard</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="underline">Giftcards</h1>
+        <nav class="navigate">
+          <ul>
+            <li><a href="index.html" >Homepage</a> </li>
+            <li><a href="giftcard.html" class="active">Gift Card Calculator</a> </li>
+            <li><a href="books.html">Book Search</a> </li>
+          </ul>
+        </nav>
+      </header>
+
+
+      <main>
+          <section class="page-wrapper">
+            <div class="left">
+              <h2 class="giftcard-header"> Calculate your total</h2>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="labelname">Giftcard value (Includes VAT)</label> 
+                  <br>
+                  <input id="value" name="value" type="number" min="5" max="200" placeholder="£" >
+                  <br>
+                  <p>Please enter between £5 - £200</p>
+                </div>
+                <div class="form-group">
+                  <label class="labelname">Quantity</label> 
+                  <br>
+                  <input id="quantity" name="quantity"  type="number"  min="1" max="20">
+                  <br>
+                  <p>Please enter between 1 - 20</p>
+                </div>
+              </div>
+
+              <h2 class="deli-header">Delivery Method</h2>
+              <br>
+              <div class="deli-options">
+                <div class="option">
+                  <input id="egift" type="radio" name="delivery" value="egift"> 
+                  <label for="egift">E-gift (no postage fee)</label>
+                </div>
+
+                <div class="option">    
+                  <input id="physical" type="radio" name="delivery" value="physical"> 
+                  <label for="physical">Physical Card  (+£3 postage fee)</label>
+                </div>
+                
+              </div>
+
+              <div class="buttons">
+                <button id="calculate-btn" class="calculate" type="button">Calculate</button>
+                <button id="reset-btn" class="reset">Reset</button>
+              </div>
+
+            </div>
+                
+            <div class="right">
+              <H2 class="summary-header">Summary</H2>
+              <div class="summary">
+                <p>Subtotal (excluding VAT):<span id="subtotal">£0.00</span></p>
+                <p>VAT(10%):<span id="vatamo">£0.00</span></p>
+                <p>Postage fee:<span id="postfee">£0.00</span></p>
+                <p class="total-p"><span class="total-text">Total:</span> <span id="totalpay">£0.00</span></p>
+              </div>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+          
+          </section>
+
+
+
+
+
+      </main>
+
+<script src="giftcard.js"></script>
+</body>
+
+</html>
